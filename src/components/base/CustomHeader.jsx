@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { styled } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import MuiAppBar from '@mui/material/AppBar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+
+import Constants from '../../utils/Constants';
+
+const drawerWidth = Constants.drawerWidth
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -18,7 +22,7 @@ const AppBar = styled(MuiAppBar, {
     {
       props: ({ open }) => open,
       style: {
-        marginLeft: props.drawerWidth,
+        marginLeft: drawerWidth,
         width: `calc(100% - ${drawerWidth}px)`,
         transition: theme.transitions.create(['width', 'margin'], {
           easing: theme.transitions.easing.sharp,
@@ -29,7 +33,7 @@ const AppBar = styled(MuiAppBar, {
   ],
 }))
 
-function HeaderBar(props) {
+function CustomHeader(props) {
   return (
     <AppBar position="fixed" open={props.drawerStatus}>
       <Toolbar>
@@ -55,4 +59,4 @@ function HeaderBar(props) {
   );
 }
 
-export default HeaderBar
+export default CustomHeader
