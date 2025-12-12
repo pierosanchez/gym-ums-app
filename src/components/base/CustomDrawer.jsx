@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, useTheme } from '@mui/material'
+import { styled, useTheme } from '@mui/material';
 import MuiDrawer from '@mui/material/Drawer';
 
 import List from '@mui/material/List';
