@@ -1,8 +1,16 @@
 import { alpha } from '@mui/material/styles';
-import { gray } from '../themePrimitives';
+import { gray } from '../primitives';
 
-/* eslint-disable import/prefer-default-export */
-export const surfacesCustomizations = {
+export const surfaceCustomizations = {
+  MuiBox: {
+    root: {
+      background: [
+        ['url(image1.png)', 'no-repeat', 'top'],
+        ['url(image2.png)', 'no-repeat', 'center'],
+        '!important',
+      ],
+    },
+  },
   MuiAccordion: {
     defaultProps: {
       elevation: 0,
@@ -110,4 +118,4 @@ export const surfacesCustomizations = {
       },
     },
   },
-};
+}
